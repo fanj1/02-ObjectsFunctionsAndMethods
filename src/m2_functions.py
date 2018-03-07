@@ -126,7 +126,7 @@ def turtle5():
 
     dannz = rg.SimpleTurtle()
     dannz.speed = 20
-    dannz.pen = rg.Pen('yello', 15)
+    dannz.pen = rg.Pen('green', 15)
 
     dannz.backward(200)
     dannz.left(133)
@@ -140,9 +140,10 @@ def turtle5():
     dannx.speed = 6
     dannx.pen = rg.Pen('black', 7)
 
-    dannx.backward(300)
+    dannx.left(90)
+    dannx.backward(200)
     dannx.left(100)
-    dannx.forward(500)
+    dannx.forward(100)
 
     dannx.begin_fill()
     dannx.draw_square(30)
