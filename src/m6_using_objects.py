@@ -18,6 +18,7 @@ def main():
     circle_and_rectangle()
     lines()
 
+
 def two_circles():
     """
     -- Constructs an rg.RoseWindow.
@@ -84,7 +85,7 @@ def circle_and_rectangle():
            150.0
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # DONE: 3. Implement this function, per its doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -92,6 +93,34 @@ def circle_and_rectangle():
     # IMPORTANT: Use the DOT TRICK to guess the names of the relevant
     #       instance variables for outline thickness, etc.
     # -------------------------------------------------------------------------
+    window = rg.RoseWindow()
+
+    center_point = rg.Point(300, 200)
+    radius = 50
+    circle = rg.Circle(center_point, radius)
+    circle.fill_color = 'blue'
+    circle.attach_to(window)
+
+    corner1 = rg.Point(10, 100)
+    corner2 = rg.Point(100, 10)
+    r = rg.Rectangle(corner1, corner2)
+    r.attach_to(window)
+
+    window.render()
+
+    print(circle.outline_thickness)
+    print(circle.fill_color)
+    print(circle.center)
+    print(circle.center.x)
+    print(circle.center.y)
+
+    print(r.outline_thickness)
+    print(r.fill_color)
+    print((corner2 + corner1) / 2)
+    #print(r.center.x)
+    #print(r.center.y)
+
+    window.close_on_mouse_click()
 
 
 def lines():
