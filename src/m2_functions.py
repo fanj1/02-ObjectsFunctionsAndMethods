@@ -19,7 +19,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 ###############################################################################
 
 import rosegraphics as rg
-import math
+import random
 
 
 def main():
@@ -36,6 +36,7 @@ def main():
     turtle3()
     turtle2()
     turtle2()
+    turtle5()
 
 
     window.close_on_mouse_click()
@@ -119,6 +120,33 @@ def turtle4():
     danny.begin_fill()
     danny.draw_square(100)
     danny.end_fill()
+
+
+def turtle5():
+
+    dannz = rg.SimpleTurtle()
+    dannz.speed = 20
+    dannz.pen = rg.Pen('yello', 15)
+
+    dannz.backward(200)
+    dannz.left(133)
+    dannz.forward(100)
+
+    dannz.begin_fill()
+    dannz.draw_square(50)
+    dannz.end_fill()
+
+    dannx = rg.SimpleTurtle()
+    dannx.speed = 6
+    dannx.pen = rg.Pen('black', 7)
+
+    dannx.backward(300)
+    dannx.left(100)
+    dannx.forward(500)
+
+    dannx.begin_fill()
+    dannx.draw_square(30)
+    dannx.end_fill()
 
 ###############################################################################
 #
