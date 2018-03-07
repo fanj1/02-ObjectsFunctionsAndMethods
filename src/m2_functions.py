@@ -19,7 +19,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 ###############################################################################
 
 import rosegraphics as rg
-import ran
+import math
 
 
 def main():
@@ -32,9 +32,11 @@ def main():
     window = rg.TurtleWindow()
 
     turtle1()
+    turtle4()
     turtle3()
     turtle2()
     turtle2()
+
 
     window.close_on_mouse_click()
 
@@ -104,6 +106,20 @@ def turtle3():
     maja.end_fill()
 
 
+def turtle4():
+
+    danny = rg.SimpleTurtle()
+    danny.speed = 8
+    danny.pen = rg.Pen('red', 5)
+
+    danny.backward(200)
+    danny.left(45)
+    danny.forward(50)
+
+    danny.begin_fill()
+    danny.draw_square(100)
+    danny.end_fill()
+
 ###############################################################################
 #
 # DONE: 3.
@@ -138,7 +154,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 4.
+# DONE: 4.
 #   Define another function,
 #   immediately below the end of the definition of   turtle3   above.
 #   Name your new function   turtle4.
@@ -168,7 +184,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 5.
+# DONE: 5.
 #   Add a line to   main   that CALLS your new function immediately
 #   AFTER  main  calls turtle1.  So:
 #     -- the SimpleTurtle from turtle1 should move,
